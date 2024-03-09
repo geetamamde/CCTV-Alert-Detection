@@ -1,0 +1,7 @@
+
+ {{info.final_price}}
+
+ <form action="{% url 'checkout_session' id=info.id %}" method="get">
+    {% csrf_token %}
+    <button class="btn btn-primary" type="submit" id="checkout-button">Buy Now</button>
+</form>

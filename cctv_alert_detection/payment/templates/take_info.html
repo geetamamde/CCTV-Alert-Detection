@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan Information</title>
+</head>
+<body>
+    <h2>Plan Information Form</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        <label for="number_of_cctvs">Number of CCTVs:</label>
+        <input type="number" id="number_of_cctvs" name="number_of_cctvs" value="1" min="1" required>
+        
+        <label for="start_time">Start Time:</label>
+        <input type="time" id="start_time" name="start_time" required>
+        
+        <label for="end_time">End Time:</label>
+        <input type="time" id="end_time" name="end_time" required>
+        
+        <label for="period">Period:</label>
+        <select id="period" name="period">
+            <option value="month">Month</option>
+            <option value="year">Year</option>
+        </select>
+    
+        <label for="card_choice">Choose Card:</label>
+        <select id="card_choice" name="card_choice">
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+            <option value="diamond">Diamond</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+{% comment %} {% url 'submit_plan_information' %} {% endcomment %}
